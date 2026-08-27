@@ -1,43 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>유희왕 카드 데이터베이스</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="container">
-    <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유희왕 서치카드 탐색기</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
         <h1>YUGIOH DATABASE</h1>
-        <p class="subtitle">카드 상호 연계 및 서치 데이터 조회 시스템</p>
-    </header>
-    
-    <div class="search-box-wrapper">
+        <p class="subtitle">카드별 서치카드 조회</p>
+      </header>
+
+      <div class="search-box-wrapper">
         <div class="input-group">
-            <input type="text" id="cardInput" placeholder="카드 명칭을 입력하십시오." autocomplete="off">
-            <button id="searchBtn" onclick="onSearchCard()">조회</button>
+          <input
+            type="text"
+            id="cardInput"
+            placeholder="카드명을 입력하십시오."
+            autocomplete="off"
+          />
+          <button id="searchBtn" onclick="onSearchCard()">조회</button>
         </div>
         <div id="autocompleteList" class="autocomplete-items"></div>
-    </div>
+      </div>
 
-    <div id="cardDetails" class="card-details-panel" style="display: none;">
+      <div id="cardDetails" class="card-details-panel" style="display: none">
         <div class="card-profile" id="cardProfile"></div>
-        
-        <div class="relation-section">
-            <div class="relation-box">
-                <h4>선행 카드</h4>
-                <ul id="incomingList"></ul>
-            </div>
-            <div class="relation-box">
-                <h4>후행 카드</h4>
-                <ul id="outgoingList"></ul>
-            </div>
-        </div>
-    </div>
-</div>
 
-<script src="app.js"></script>
-</body>
+        <div class="relation-section">
+          <div class="relation-box">
+            <h4>선행 카드</h4>
+            <ul id="incomingList"></ul>
+          </div>
+          <div class="relation-box">
+            <h4>후행 카드</h4>
+            <ul id="outgoingList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
